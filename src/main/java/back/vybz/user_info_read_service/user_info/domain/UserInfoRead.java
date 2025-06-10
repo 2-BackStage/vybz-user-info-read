@@ -45,6 +45,12 @@ public class UserInfoRead {
     private Integer followingCount;
 
     /**
+     * 팔로잉 수 (표시용)
+     */
+    @Field(name = "display_following_count")
+    private String displayFollowingCount;
+
+    /**
      * 구독 수
      */
     @Field(name = "subscribe_count")
@@ -68,6 +74,11 @@ public class UserInfoRead {
         this.userUuid = userUuid;
         this.nickname = nickname;
         this.profileImageUrl = profileImageUrl;
+    }
+
+    public void updateFollowingCount(Integer followingCount, String displayFollowingCount) {
+        this.followingCount = followingCount;
+        this.displayFollowingCount = displayFollowingCount;
     }
 
     @Builder
