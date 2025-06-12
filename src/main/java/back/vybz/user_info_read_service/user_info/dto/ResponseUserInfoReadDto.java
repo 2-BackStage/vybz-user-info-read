@@ -10,7 +10,6 @@ import lombok.NoArgsConstructor;
 @NoArgsConstructor
 public class ResponseUserInfoReadDto {
 
-    private String userUuid;
     private String nickname;
     private String profileImageUrl;
     private Integer followingCount;
@@ -18,9 +17,8 @@ public class ResponseUserInfoReadDto {
     private Integer vTicketCount;
 
     @Builder
-    public ResponseUserInfoReadDto(String userUuid, String nickname, String profileImageUrl,
+    public ResponseUserInfoReadDto(String nickname, String profileImageUrl,
                                    Integer followingCount, Integer subscribeCount, Integer vTicketCount) {
-        this.userUuid = userUuid;
         this.nickname = nickname;
         this.profileImageUrl = profileImageUrl;
         this.followingCount = followingCount;
@@ -30,7 +28,6 @@ public class ResponseUserInfoReadDto {
 
     public static ResponseUserInfoReadDto from(UserInfoRead userInfoRead) {
         return ResponseUserInfoReadDto.builder()
-                .userUuid(userInfoRead.getUserUuid())
                 .nickname(userInfoRead.getNickname())
                 .profileImageUrl(userInfoRead.getProfileImageUrl())
                 .followingCount(userInfoRead.getFollowingCount())
@@ -41,7 +38,6 @@ public class ResponseUserInfoReadDto {
 
     public ResponseUserInfoReadVo toVo() {
         return ResponseUserInfoReadVo.builder()
-                .userUuid(userUuid)
                 .nickname(nickname)
                 .profileImageUrl(profileImageUrl)
                 .followingCount(followingCount)
