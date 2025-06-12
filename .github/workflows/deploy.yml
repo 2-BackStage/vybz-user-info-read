@@ -45,7 +45,7 @@ jobs:
           username: ${{ secrets.EC2_USER }}
           key: ${{ secrets.EC2_SSH_KEY }}
           script: |
-            cd ~/vybz/busker-info-read-service
+            cd ~/vybz/user-info-read-service
             
             export USER_INFO_READ_IMAGE_TAG=${{ github.sha }}
             docker-compose down
