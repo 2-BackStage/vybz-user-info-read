@@ -18,8 +18,8 @@ public class CreateUserInfoEventConsumer {
     private final UserInfoReadRepository userInfoReadRepository;
 
     @KafkaListener(
-            topics = "create-user-auth",
-            groupId = "user-info-read-group",
+            topics = "create-user-auth-1",
+            groupId = "user-info-read-group-1",
             containerFactory = "userInfoKafkaListenerContainerFactory"
     )
     public void consumeUserInfoEvent(UserInfoEvent userInfoEvent) {
