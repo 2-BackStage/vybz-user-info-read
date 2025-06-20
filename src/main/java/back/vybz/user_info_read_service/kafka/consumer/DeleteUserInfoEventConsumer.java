@@ -15,7 +15,7 @@ public class DeleteUserInfoEventConsumer {
 
     @KafkaListener(
             topics = "delete-user-info",
-            groupId = "user-info-read-group",
+            groupId = "delete-user-info-read-group",
             containerFactory = "stringUserInfoKafkaListenerContainerFactory"
     )
     public void consumeDeleteUserInfoEvent(String userUuid) {

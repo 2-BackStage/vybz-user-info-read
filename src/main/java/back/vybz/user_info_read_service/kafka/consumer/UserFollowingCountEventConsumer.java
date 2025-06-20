@@ -19,7 +19,7 @@ public class UserFollowingCountEventConsumer {
 
     @KafkaListener(
             topics = "user-following-count",
-            groupId = "user-info-read-group",
+            groupId = "user-following-group",
             containerFactory = "userFollowingCountKafkaListenerContainerFactory"
     )
     public void consumeUserFollowingCountEvent(UserFollowingCountEvent event) {

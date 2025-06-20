@@ -17,7 +17,7 @@ public class UpdateUserInfoEventConsumer {
 
     @KafkaListener(
             topics = "update-user-info",
-            groupId = "user-info-read-group",
+            groupId = "update-user-info-read-group",
             containerFactory = "userInfoKafkaListenerContainerFactory"
     )
     public void consumeUpdateUserInfoEvent(UserInfoEvent userInfoEvent) {
