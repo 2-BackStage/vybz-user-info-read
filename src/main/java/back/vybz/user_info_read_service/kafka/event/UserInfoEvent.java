@@ -15,6 +15,7 @@ public class UserInfoEvent {
     private String nickname;
     private String profileImageUrl;
     private Integer followingCount;
+    private String displayFollowingCount;
     private Integer subscribeCount;
     private Integer vTicketCount;
 

@@ -83,13 +83,14 @@ public class UserInfoRead {
 
     @Builder
     public UserInfoRead(String id, String userUuid, String nickname, String profileImageUrl,
-                        Integer followingCount, Integer subscribeCount, Integer vTicketCount,
+                        Integer followingCount, String displayFollowingCount, Integer subscribeCount, Integer vTicketCount,
                         Instant createdAt, Instant updatedAt) {
         this.id = id;
         this.userUuid = userUuid;
         this.nickname = nickname;
         this.profileImageUrl = profileImageUrl;
         this.followingCount = followingCount;
+        this.displayFollowingCount = displayFollowingCount;
         this.subscribeCount = subscribeCount;
         this.vTicketCount = vTicketCount;
         this.createdAt = createdAt;

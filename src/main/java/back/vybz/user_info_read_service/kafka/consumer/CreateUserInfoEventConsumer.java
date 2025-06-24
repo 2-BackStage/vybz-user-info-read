@@ -36,6 +36,7 @@ public class CreateUserInfoEventConsumer {
                 .nickname(userInfoEvent.getNickname())
                 .profileImageUrl(userInfoEvent.getProfileImageUrl())
                 .followingCount(userInfoEvent.getFollowingCount() == null ? 0 : userInfoEvent.getFollowingCount())
+                .displayFollowingCount(userInfoEvent.getDisplayFollowingCount() == null ? "0" : userInfoEvent.getDisplayFollowingCount())
                 .subscribeCount(userInfoEvent.getSubscribeCount() == null ? 0 : userInfoEvent.getSubscribeCount())
                 .vTicketCount(userInfoEvent.getVTicketCount() == null ? 0 : userInfoEvent.getVTicketCount())
                 .build();
