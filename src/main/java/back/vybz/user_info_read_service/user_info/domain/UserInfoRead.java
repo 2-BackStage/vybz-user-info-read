@@ -1,9 +1,6 @@
 package back.vybz.user_info_read_service.user_info.domain;
 
-import lombok.AllArgsConstructor;
-import lombok.Builder;
-import lombok.Getter;
-import lombok.NoArgsConstructor;
+import lombok.*;
 import org.springframework.data.annotation.CreatedDate;
 import org.springframework.data.annotation.Id;
 import org.springframework.data.annotation.LastModifiedDate;
@@ -79,6 +76,10 @@ public class UserInfoRead {
     public void updateFollowingCount(Integer followingCount, String displayFollowingCount) {
         this.followingCount = followingCount;
         this.displayFollowingCount = displayFollowingCount;
+    }
+
+    public void setVTicketCount(Integer vTicketCount) {
+        this.vTicketCount = vTicketCount;
     }
 
     @Builder
