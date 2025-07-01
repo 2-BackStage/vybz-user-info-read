@@ -82,6 +82,8 @@ public class UserInfoRead {
         this.vTicketCount = vTicketCount;
     }
 
+    public void setSubscribeCount(Integer subscribeCount) { this.subscribeCount = subscribeCount; }
+
     @Builder
     public UserInfoRead(String id, String userUuid, String nickname, String profileImageUrl,
                         Integer followingCount, String displayFollowingCount, Integer subscribeCount, Integer vTicketCount,
